@@ -83,7 +83,8 @@ def main(url, down_path=getDownloadPath(),start=0,end=-1,overwrite=False):
 
         #Dynamic filename needed so that multiple .txt(s) can be obtained
         filename = 'LinksList.txt'
-        filepath = down_path+"/"+filename
+        filepath = down_path+filename if (down_path[-1]=="/") else (down_path+"/"+filename)
+        print filepath
         links_file = open(filepath,'a')
         
         for link in video_links:
@@ -111,7 +112,6 @@ def main(url, down_path=getDownloadPath(),start=0,end=-1,overwrite=False):
 if __name__ == '__main__':
         parser = getArgParser()
         args = parser.parse_args()
-        print args.showpath
         if args.showpath:
                 print getDownloadPath()
         else:

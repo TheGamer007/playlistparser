@@ -2,7 +2,7 @@
 PlaylistParser is a Python command-line utility to download videos from a YouTube playlist 
 
 ##Description
-PlaylistParser takes in the url of a YouTube playlist page and downloads the some or all of the videos listed on it depending on the arguments passed.
+PlaylistParser takes in the url of a YouTube playlist page and downloads the some or all of the videos listed on it depending on the arguments passed. It also saves the urls of all downloaded videos into a .txt file in the download directory.
 
 By default, PlaylistParser selects the highest resolution among the download options available for your videos. If multiple extensions exist at the highest resolution, it will prefer .mp4 over others.
 
@@ -37,7 +37,7 @@ Similarly, passing only `--end` will download all videos till end
 $ ./playlistparser https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBhgcpA8eTYYWg7im72LgLt --end 3
 ```
 
-If a file with the same name as one being downloaded exists in the directory, the user gets a prompt to confirm overwrite. To overwrite all conflicting files, the `-f` flag should be passed. If overwrite is cancelled, that file is skipped and it's url is not added to the text file
+If a file with the same name as one being downloaded exists in the directory, the user gets a prompt to confirm overwrite. To overwrite all conflicting files, the `-f` flag should be passed. If overwrite is cancelled, that file is **skipped** and its url is **not added** to the text file
 
 **_Incomplete feature_** The current download directory can be checked from command-line by using `-show`
 ```
