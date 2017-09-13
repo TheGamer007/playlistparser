@@ -1,19 +1,19 @@
 # playlistparser
 PlaylistParser is a Python command-line utility to download videos from a YouTube playlist 
 
-##Description
+## Description
 PlaylistParser takes in the url of a YouTube playlist page and downloads the some or all of the videos listed on it depending on the arguments passed. It also saves the urls of all downloaded videos into a .txt file in the download directory.
 
 By default, PlaylistParser selects the highest resolution among the download options available for your videos. If multiple extensions exist at the highest resolution, it will prefer .mp4 over others.
 
-##Installation
+## Installation
 Run the included installscript.sh file. This will install modules necessary for the project, if not available on your machine.
 ```
 $ ./installscript.sh
 ```
 Note: If this does not run, you need to make it executable by running `chmod +x installscript.sh`
 
-##Usage
+## Usage
 The program is intended to be run as a command-line utility. It will ask you for a preferred download directory the first time it is run. Skipping this sets it to the default home directory.
 
 Note: If this does not run, you need to make sure it is executable by running `chmod +x playlistparser.py`
